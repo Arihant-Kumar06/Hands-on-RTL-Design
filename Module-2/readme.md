@@ -20,7 +20,7 @@ The machine must output `div_o = 1` **if and only if** the newly formed number
 - Input arrives **every cycle**
 - Output must be produced **in the same cycle**
 - Output should be HIGH when the current number is 0
-- Number grows infinitely — cannot store it
+- Number grows infinitely, so cannot store it
 - Use **positive edge triggered flops** with **asynchronous reset**
 
 ---
@@ -83,20 +83,20 @@ div_o = 1 when new remainder == 0
 ## 5. Learnings & Takeaways
 
 ### ✔ Minimal-State Thinking  
-Store only what matters — here, just the **remainder mod 3**.
+Store only what matters  here, just the **remainder mod 3**.
 
 ### ✔ Math → Hardware Mapping  
 Binary shifting & modulo arithmetic naturally form FSM transitions.
 
 ### ✔ FSM Concepts  
 - State encoding  
-- Next-state logic  
+- Next state logic  
 - Mealy vs Moore behavior  
 - Async reset  
 - Sequential vs combinational logic  
 
 ### ✔ Streaming Processing  
-Hardware often processes data bit-by-bit (like CRC, hashing, serial protocols).
+Hardware often processes data bit by bit (like CRC, hashing, serial protocols).
 
 ### ✔ SystemVerilog Skills  
 - `always_ff`, `always_comb`  
@@ -105,5 +105,5 @@ Hardware often processes data bit-by-bit (like CRC, hashing, serial protocols).
 
 ---
 
-This project shows how elegant and efficient FSM-based hardware designs can be when using mathematical insight instead of brute‑force storage.
+This project shows how elegant and efficient FSM based hardware designs can be when using mathematical insight instead of brute force storage.
 
